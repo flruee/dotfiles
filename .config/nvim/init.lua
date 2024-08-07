@@ -1,4 +1,5 @@
 require("flo")
+
 vim.wo.number = true
 vim.wo.relativenumber = true
 local set = vim.opt
