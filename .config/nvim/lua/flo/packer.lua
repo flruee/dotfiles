@@ -7,7 +7,7 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.6',
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
+        branch = 'v4.x',
         requires = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' }, -- Required
@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
         }
     }
     use { 'christoomey/vim-tmux-navigator' }
-    use("github/copilot.vim")
+    use "github/copilot.vim"
     use "nvim-neotest/nvim-nio"
     use 'mfussenegger/nvim-dap'
     use "mfussenegger/nvim-dap-python"
@@ -64,5 +64,6 @@ return require('packer').startup(function(use)
     use { "mikavilpas/yazi.nvim",
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+    --use { "mrcjkb/rustaceanvim" }
 end
 )
