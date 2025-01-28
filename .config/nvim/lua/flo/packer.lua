@@ -64,6 +64,34 @@ return require('packer').startup(function(use)
     use { "mikavilpas/yazi.nvim",
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+    --use { "tpope/vim-surround" }
+    --use 'm4xshen/autoclose.nvim'
+    use({
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        after = "nvim-treesitter",
+        requires = "nvim-treesitter/nvim-treesitter",
+    })
+    use {
+        'jmbuhr/otter.nvim',
+        dependencies = {
+            'nvim-treesitter/nvim-treesitter',
+        },
+        opts = {},
+    }
+    use '3rd/image.nvim'
+    use 'GCBallesteros/jupytext.nvim'
+    use {
+        "nvimtools/hydra.nvim",
+    }
+    use 'benlubas/molten-nvim'
+    use {
+        'quarto-dev/quarto-nvim',
+        requires = {
+            'jmbuhr/otter.nvim',
+            'nvim-treesitter/nvim-treesitter'
+        }
+    }
+
     --use { "mrcjkb/rustaceanvim" }
 end
 )

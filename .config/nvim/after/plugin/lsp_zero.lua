@@ -32,6 +32,9 @@ require('mason-lspconfig').setup({
                                 ['async-recursion'] = { 'async_recursion' },
                             },
                         },
+                        diagnostic = {
+                            refreshSupport = false,
+                        }
                     },
                 },
             })
@@ -53,6 +56,7 @@ lsp.format_on_save({
         -- ['null-ls'] = {'javascript', 'typescript'},
     }
 })
+
 lsp.on_attach(function(client, bufnr)
     lsp.default_keymaps({ buffer = bufnr })
     local opts = { buffer = bufnr, remap = false }
