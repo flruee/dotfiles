@@ -1,4 +1,5 @@
 local otter = require 'otter'
+--[[
 otter.setup {
     lsp = {
         -- `:h events` that cause the diagnostics to update. Set to:
@@ -41,3 +42,4 @@ otter.setup {
         no_code_found = false -- warn if otter.activate is called, but no injected code was found
     },
 }
+--]]
