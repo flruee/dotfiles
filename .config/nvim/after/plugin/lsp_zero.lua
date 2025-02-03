@@ -1,3 +1,4 @@
+--[[
 local lsp = require('lsp-zero')
 
 lsp.extend_lspconfig({
@@ -146,3 +147,4 @@ end)
 -- (Optional) Configure lua language server for neovim
 
 --lsp.setup()
+--]]
