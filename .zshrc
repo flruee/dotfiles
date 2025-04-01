@@ -124,7 +124,8 @@ alias xo="xdg-open"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-[ -f "/home/flo/.ghcup/env" ] && source "/home/flo/.ghcup/env" # ghcup-env
+#[ -f "/home/flo/.ghcup/env" ] && source "/home/flo/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 export EDITOR='nvim'
 
 

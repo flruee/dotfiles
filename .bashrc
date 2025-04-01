@@ -127,24 +127,11 @@ if ! shopt -oq posix; then
 fi
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/home/flo/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/home/flo/anaconda3/etc/profile.d/conda.sh" ]; then
-#        . "/home/flo/anaconda3/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/home/flo/anaconda3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-## <<< conda initialize <<<
 
 
 # Created by `pipx` on 2021-07-20 15:32:25
-export PATH="$PATH:/home/flo/.local/bin"
+#export PATH="$PATH:/home/flo/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 . "$HOME/.cargo/env"
 
 export NVM_DIR="$HOME/.nvm"
