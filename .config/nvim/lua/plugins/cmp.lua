@@ -56,6 +56,7 @@ return {
             preselect = false,
 
             formatting = {
+                --[[
                 format = lspkind.cmp_format({
                     mode = 'symbol', -- show only symbol annotations
                     maxwidth = {
@@ -75,6 +76,7 @@ return {
                         return vim_item
                     end
                 })
+            ]]--
             },
             window = {
                 completion = cmp.config.window.bordered(),
@@ -285,6 +287,23 @@ return {
                         init_options = {},
                     }
                 end,
+                angularls = function()
+
+                    require("lspconfig").angularls.setup{
+                        cmd = { "ngserver", "--stdio" },
+                        filetypes = { "typescript", "html", "typescriptreact", "typescript.tsx" },
+                        root_dir = require("lspconfig").util.root_pattern("angular.json", "package.json"),
+                        settings = {
+                            angular = {
+                                enableTypeScript = true,
+                                templateLanguageService = {
+                enable = true,
+            },
+                            }
+                        }
+                    }
+                end
+
 
 
             }

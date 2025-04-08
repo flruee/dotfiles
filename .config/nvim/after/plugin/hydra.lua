@@ -23,7 +23,7 @@ hydra({
         { "r",     ":QuartoSend<CR>" },
         { "l",     ":QuartoSendLine<CR>" },
         { "R",     ":QuartoSendAbove<CR>" },
-        { "<esc>", nil,                   { exit = true } },
+        --{ "<esc>", nil,                   { exit = true } },
         { "q",     nil,                   { exit = true } },
     },
 })

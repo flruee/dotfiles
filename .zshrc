@@ -4,6 +4,8 @@
 #aliases
 alias nv="nvim"
 alias vim="nvim"
+alias goto_windows="cd /mnt/c/Users/FlorianRüegsegger/"
+alias goto_drive="cd /mnt/g/My\ Drive/"
 export CPLUS_INCLUDE_PATH=/usr/include/c++/11:/usr/include/x86_64-linux-gnu/c++/11
 #automatically start tmux
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
@@ -16,6 +18,7 @@ fi
 # If you come from bash you might have to change your $PATH.
  export PATH=$HOME/bin:/usr/local/bin:$HOME/include:/opt/nvim:$PATH
 
+# export PATH=$HOME/.local/bin:PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -140,3 +143,11 @@ function yy() {
 	fi
 	rm -f -- "$tmp"
 }
+
+#dotnet env vars
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
