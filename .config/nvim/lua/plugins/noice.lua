@@ -3,6 +3,7 @@ return {
     "folke/noice.nvim",
     event = { "BufReadPost", "BufNewFile" },
     dependencies = { "MunifTanjim/nui.nvim" },
+    enabled=false,
     init = function()
       vim.opt.lazyredraw = false
     end,

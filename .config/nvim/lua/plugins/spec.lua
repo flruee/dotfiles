@@ -149,9 +149,11 @@ return {
 
     },
     { 'christoomey/vim-tmux-navigator' },
+    --[[
     { "github/copilot.vim",
         enabled = false
     },
+    ]]--
     { "nvim-neotest/nvim-nio" },
     { 'mfussenegger/nvim-dap' },
     { "mfussenegger/nvim-dap-python" },
@@ -163,7 +165,7 @@ return {
 
     { "nvim-lua/plenary.nvim" },
     { "Shatur/neovim-tasks" },
-    { "ray-x/lsp_signature.nvim" },
+    --{ "ray-x/lsp_signature.nvim" },
     {
         "mikavilpas/yazi.nvim",
         dependencies = { 'nvim-lua/plenary.nvim' }
@@ -239,6 +241,21 @@ return {
             'jmbuhr/otter.nvim',
             'nvim-treesitter/nvim-treesitter'
         }
-    }, 
-    { 'mfussenegger/nvim-jdtls'}
+    },
+    { 'mfussenegger/nvim-jdtls'},
+    {
+        "nvzone/typr",
+        dependencies = "nvzone/volt",
+        opts = {},
+        cmd = { "Typr", "TyprStats" },
+        {
+            "rachartier/tiny-inline-diagnostic.nvim",
+            event = "VeryLazy",
+            priority = 1000,
+            config = function()
+                require('tiny-inline-diagnostic').setup()
+                vim.diagnostic.config({ virtual_text = false }) -- Disable default virtual text
+            end
+        }
+    },
 }

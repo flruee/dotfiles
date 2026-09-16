@@ -1,3 +1,4 @@
+--[[
 vim.g.copilot_enabled = false
 vim.keymap.set(
 
@@ -11,3 +12,4 @@ vim.keymap.set(
 
 )
 vim.keymap.set({ "i" }, "<C-L>", "<Plug>(copilot-suggest)")
+]]--

@@ -55,12 +55,9 @@ return {
         --local capabilities = require('cmp_nvim_lsp').default_capabilities()
         local capabilities = require('blink.cmp').get_lsp_capabilities()
         -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-        require('lspconfig')['clangd'].setup {
+        vim.lsp.config('basedpyright',{
             capabilities = capabilities
-        }
-        require('lspconfig')['basedpyright'].setup {
-            capabilities = capabilities
-        }
+        })
         -- local lspkind = require("lspkind")
         -- local cmp = require("cmp")
         -- local util = require 'lspconfig.util'
@@ -137,7 +134,7 @@ return {
             ensure_installed = { 'lua_ls', 'rust_analyzer', },
             handlers = {
                 function(server_name)
-                    require('lspconfig')[server_name].setup({})
+                    vim.lsp.config(server_name,{})
                 end,
                 --lua_ls = function()
                 --require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
@@ -178,7 +175,7 @@ return {
                     }
                 end,
                 rust_analyzer = function()
-                    require('lspconfig').rust_analyzer.setup({
+                        vim.lsp.config('.rust_analyzer',{
                         settings = {
                             ['rust-analyzer'] = {
                                 cargo = {
